@@ -30,7 +30,7 @@ const ContactMe = () => {
 
             <div className="flex flex-col items-center text-center">
               <IoCallSharp className="text-white w-20 h-20" />
-              <p className="text-2xl font-semibold">Mobile Number</p>
+              <p className="text-2xl font-semibold">Contact Number</p>
 
               <a href="tel:+912235130730" className="underline text-white">
                 +91 2235130730

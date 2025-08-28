@@ -34,16 +34,16 @@ function Footer() {
                       Home
                     </a>
                   </li>
-                  <li>
+                  {/* <li>
                     <a href="/about" className="hover:underline">
                       About
                     </a>
-                  </li>
-                  <li>
+                  </li> */}
+                  {/* <li>
                     <a href="/blog" className="hover:underline">
                       News
                     </a>
-                  </li>
+                  </li> */}
                   <li>
                     <a href="/contact" className="hover:underline">
                       Contact

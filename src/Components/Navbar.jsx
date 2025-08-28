@@ -94,7 +94,7 @@ function Navbar() {
                   Home
                 </Link>
               </li>
-              <li>
+              {/* <li>
                 <Link
                   to="/about"
                   className={`block py-2 px-3 rounded md:p-0 ${
@@ -105,7 +105,7 @@ function Navbar() {
                 >
                   Approach
                 </Link>
-              </li>
+              </li> */}
               {/* <li>
                 <Link
                   to="/team"
@@ -118,7 +118,7 @@ function Navbar() {
                   Team
                 </Link>
               </li> */}
-              <li>
+              {/* <li>
                 <Link
                   to="/blog"
                   className={`block py-2 px-3 rounded md:p-0 ${
@@ -129,7 +129,7 @@ function Navbar() {
                 >
                   News
                 </Link>
-              </li>
+              </li> */}
               <li>
                 <Link
                   to="/contact"
