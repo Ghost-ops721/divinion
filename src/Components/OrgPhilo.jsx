@@ -5,9 +5,9 @@ const OrgPhilo = () => {
     <>
       {/* <div className="flex flex-row justify-between m-5 lg:m-32 items-center"></div> */}
       <div className="">
-        <p className="text-3xl hover:text-6xl cursor-pointer ease-in transition: duration-700 lg:text-5xl text-center font-joe font-semibold mt-10 lg:mt-32">
+        <h2 className="text-3xl hover:text-6xl cursor-pointer ease-in transition: duration-700 lg:text-5xl text-center font-joe font-semibold mt-10 lg:mt-32">
           Organisation Philosophy
-        </p>
+        </h2>
 
         <div className="flex lg:flex-row  lg:justify-between  flex-col gap-20 m-5 lg:mt-32 lg:ml-32 lg:mr-32 lg:mb-10">
           <div className="flex flex-col items-center text-center gap-10 text-sm lg:text-lg">
@@ -24,7 +24,7 @@ const OrgPhilo = () => {
           </div>
           <div className="lg:h-[400px] lg:w-1 bg-[#5f7530] rounded "></div>
           <div className="">
-            <img src="philo.svg" className="" alt="" />
+            <img src="philo.svg" className="" alt="Illustration showing Divinion as a trusted partner for capital preservation, highlighting team experience of over 100 years and a collaborative investment approach" />
           </div>
         </div>
       </div>

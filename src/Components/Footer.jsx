@@ -91,7 +91,7 @@ function Footer() {
               © 2024{" "}
               <a
                 href="https://www.divinion-investments.com/"
-                className="hover:underline"
+                className="underline"
               >
                 Divinion
               </a>

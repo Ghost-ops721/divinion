@@ -150,9 +150,9 @@ const AboutBanOne = () => {
                             )}
                         </>
                     )} */}
-          <p className="text-3xl lg:text-5xl hover:text-6xl cursor-pointer ease-in transition: duration-700 text-center font-joe font-semibold mt-20 lg:mt-32">
+          <h2 className="text-3xl lg:text-5xl hover:text-6xl cursor-pointer ease-in transition: duration-700 text-center font-joe font-semibold mt-20 lg:mt-32">
             Growth Drivers & Anchors
-          </p>
+          </h2>
           <div className="mx-auto flex  flex-col p-4 lg:p-20">
             <img
               src="icy.svg"

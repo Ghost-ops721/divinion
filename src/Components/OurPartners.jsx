@@ -3,14 +3,14 @@ import React from 'react'
 const OurPartners = () => {
     return (
         <div className='py-32'>
-            <p className="text-3xl lg:text-5xl hover:text-6xl cursor-pointer ease-in transition: duration-700 text-center font-joe font-semibold mt-10">
+            <h2 className="text-3xl lg:text-5xl hover:text-6xl cursor-pointer ease-in transition: duration-700 text-center font-joe font-semibold mt-10">
                 Our Partners
-            </p>
+            </h2>
 
             <div className="flex flex-col gap-4">
                 <div className="flex lg:flex-row flex-col items-center mx-auto lg:gap-14 gap-5 justify-center">
                     <div className="flex flex-col items-center font-semibold">
-                        <img src="hdfc_logo.png" className="w-[200px]" alt="" />
+                        <img src="hdfc_logo.png" className="w-[200px]" alt="HDFC Bank logo" />
                         <p className="mt-[-40px]">Bankers</p>
                         <p>HDFC Bank Limited</p>
                     </div>
@@ -18,13 +18,13 @@ const OurPartners = () => {
                         <img
                             src="azb.png"
                             className="w-[200px] lg:mt-[25px] mt-0"
-                            alt=""
+                            alt="AZB & partners logo"
                         />
                         <p className="">Legal Advisors</p>
                         <p className="text-center">AZB & Partners</p>
                     </div>
                     <div className="flex flex-col items-center justify-center font-semibold">
-                        <img src="mcred.png" className="w-[200px] sm:block" alt="" />
+                        <img src="mcred.png" className="w-[200px] sm:block" alt="MITCON Credentia logo" />
                         <p className="mt-[-50px]">Trusteeship Services</p>
                         <p className="text-center">MITCON Credentia</p>
                     </div>
@@ -32,19 +32,19 @@ const OurPartners = () => {
 
                 <div className="flex lg:flex-row flex-col text-center items-center mx-auto gap-14 justify-center">
                     <div className="flex flex-col text-sm lg:text-base  items-center justify-center font-semibold">
-                        <img src="validus.png" className="w-[200px]" alt="" />
+                        <img src="validus.png" className="w-[200px]" alt="Validus Fintech Services Pvt. Ltd. logo" />
                         <p className="mt-[14px]">Registrar & Transfer Agents</p>
                         <p className="text-center">
                             Validus Fintech Services Pvt. Ltd.
                         </p>
                     </div>
                     <div className="flex flex-col items-center justify-center font-semibold">
-                        <img src="psgs.jpeg" className="w-[200px]" alt="" />
+                        <img src="psgs.jpeg" className="w-[200px]" alt="PSGS & CO LLP logo" />
                         <p className="lg:mt-[-60px] mt-[-20px]">Tax Consultant</p>
                         <p className="text-center">PSGS & CO LLP</p>
                     </div>
                     <div className="flex flex-col items-center justify-center font-semibold">
-                        <img src="hdfc_logo.png" className="w-[200px]" alt="" />
+                        <img src="hdfc_logo.png" className="w-[200px]" alt="HDFC Bank logo" />
                         <p className="mt-[-40px]">Custodian & Fund Accountants</p>
                         <p className="text-center">HDFC Bank Limited</p>
                     </div>

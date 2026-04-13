@@ -8,14 +8,18 @@ import HomeBanThree from "../Components/HomeBanThree";
 import Navbar from "../Components/Navbar";
 import Footer from "../Components/Footer";
 import Unavailable from "../Components/Unavailable";
+import useDocumentTitle from "../Components/heperFunctions/SetPageTitle"
 const HomePage = () => {
+  useDocumentTitle("Home - Divinion Investment");
   return (
     <>
       <Navbar />
-
       <HomBanOne />
       {/* <HomBanTwo />
       <HomeBanThree /> */}
+      <main id="main-content">
+        <h1 className="visually-hidden">Divinion investment</h1>
+      </main>
       <Footer />
 
       {/* <BannerOne />

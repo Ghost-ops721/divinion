@@ -3,9 +3,9 @@ import React from "react";
 const AboutBanTwo = () => {
   return (
     <>
-      <p className="text-3xl lg:text-5xl hover:text-6xl cursor-pointer ease-in transition: duration-700 text-center font-joe font-semibold mt-20">
+      <h2 className="text-3xl lg:text-5xl hover:text-6xl cursor-pointer ease-in transition: duration-700 text-center font-joe font-semibold mt-20">
         Our Values
-      </p>
+      </h2>
       <div className="flex flex-col items-start gap-2 lg:pl-24 pt-10 sm:pl-8  mb-10 font-semibold">
         <div className="flex flex-col lg:flex-row lg:justify-between gap-10 lg:gap-16">
           <img

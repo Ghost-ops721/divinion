@@ -7,12 +7,15 @@ import OurPartners from "../Components/OurPartners"
 
 const Team = () => {
   return (
-<>
-<Navbar />
-<AboutBanThree />
-<OurPartners />
-<Footer />
-</>  )
+    <>
+      <Navbar />
+      <main id="main-content">
+        <h1 className="visually-hidden">Team</h1>
+        <AboutBanThree />
+        <OurPartners />
+      </main>
+      <Footer />
+    </>)
 }
 
 export default Team

@@ -49,13 +49,14 @@ function Navbar() {
                   href="/"
                   className="flex items-center space-x-3 rtl:space-x-reverse"
                 >
-                  <img src="logo.svg" className="h-12" alt="Logo" />
+                  <img src="logo.svg" className="h-12" alt="Divinion Investment Logo" />
                 </a>
 
                 <button
                   data-collapse-toggle="navbar-default"
                   onClick={onNavClick}
                   type="button"
+                  aria-label="Navigation Menu"
                   className="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 "
                   aria-controls="navbar-default"
                   aria-expanded="false"
@@ -85,11 +86,10 @@ function Navbar() {
               <li>
                 <Link
                   to="/"
-                  className={`block py-2 px-3 rounded md:p-0 ${
-                    isActive("/")
+                  className={`block py-2 px-3 rounded md:p-0 ${isActive("/")
                       ? "text-dark-green"
                       : "text-gray-900 hover:text-dark-green"
-                  }`}
+                    }`}
                 >
                   Home
                 </Link>
@@ -133,11 +133,10 @@ function Navbar() {
               <li>
                 <Link
                   to="/contact"
-                  className={`block py-2 px-3 rounded md:p-0 ${
-                    isActive("/contact")
+                  className={`block py-2 px-3 rounded md:p-0 ${isActive("/contact")
                       ? "text-dark-green"
                       : "text-gray-900 hover:text-dark-green"
-                  }`}
+                    }`}
                 >
                   Contact
                 </Link>
@@ -147,11 +146,10 @@ function Navbar() {
                 <li>
                   <Link
                     to="/admin"
-                    className={`block py-2 px-3 rounded md:p-0 ${
-                      isActive("/admin")
+                    className={`block py-2 px-3 rounded md:p-0 ${isActive("/admin")
                         ? "text-dark-green"
                         : "text-gray-900 hover:text-dark-green"
-                    }`}
+                      }`}
                   >
                     Dashboard
                   </Link>
@@ -160,11 +158,16 @@ function Navbar() {
               <li className="relative">
                 <button
                   onClick={toggleServicesDropdown}
-                  className={`block py-2 px-3 rounded md:p-0 ${
-                    isActive("/services")
+                  onKeyDown={(e) => {
+                    if (e.key === "Escape") {
+                      setServicesDropdown(false);
+                    }
+                  }}
+                  aria-expanded={servicesDropdown}
+                  className={`block py-2 px-3 rounded md:p-0 ${isActive("/services")
                       ? "text-dark-green"
                       : "text-gray-900 hover:text-dark-green"
-                  }`}
+                    }`}
                 >
                   Services
                 </button>
@@ -214,7 +217,7 @@ function Navbar() {
         <div className="flex flex-col items-center pl-10 pr-10 h-[92vh] w-full bg-white gap-24">
           {/* Mobile menu */}
           <div className="flex flex-row items-center gap-20">
-            <button onClick={onNavClick}>
+            <button className="py-3 px-4" aria-label="Close Navigation Menu" onClick={onNavClick}>
               <p className="text-xl text-[#7B61FF]">X</p>
             </button>
             <a

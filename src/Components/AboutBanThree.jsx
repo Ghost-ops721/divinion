@@ -139,17 +139,17 @@ const AboutBanThree = () => {
     <>
       <div className="flex flex-col shadow-md lg:m-10 m-4 rounded-xl lg:p-12 p-2 mt-10">
         <div className="mt-16">
-          <p className="text-3xl lg:text-5xl hover:text-6xl cursor-pointer ease-in-out duration-700 text-center font-joe font-semibold mt-20">
+          <h2 className="text-3xl lg:text-5xl hover:text-6xl cursor-pointer ease-in-out duration-700 text-center font-joe font-semibold mt-20">
             Our Board Members
-          </p>
+          </h2>
           {renderRows(boardRows)}
         </div>
       </div>
       <div className="flex flex-col shadow-md lg:m-10 m-4 rounded-xl lg:p-12 p-2 mt-10">
         <div>
-          <p className="text-3xl lg:text-5xl hover:text-6xl cursor-pointer ease-in-out duration-700 text-center font-joe font-semibold mt-20">
+          <h2 className="text-3xl lg:text-5xl hover:text-6xl cursor-pointer ease-in-out duration-700 text-center font-joe font-semibold mt-20">
             Our Team
-          </p>
+          </h2>
           {renderRows(teamRows)}
         </div>
       </div>

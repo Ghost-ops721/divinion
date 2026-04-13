@@ -6,14 +6,19 @@ import AboutBanThree from "../Components/AboutBanThree";
 import Navbar from "../Components/Navbar";
 import Footer from "../Components/Footer";
 import OrgPhilo from "../Components/OrgPhilo";
+import useDocumentTitle from "../Components/heperFunctions/SetPageTitle";
 const About = () => {
+  useDocumentTitle("About Us - Divinion investment");
   return (
     <>
       <Navbar />
-      <OrgPhilo />
-      <AboutBanOne />
-      <AboutBanTwo />
-      {/* <AboutBanThree /> */}
+      <main id="main-content">
+        <OrgPhilo />
+        <AboutBanOne />
+        <AboutBanTwo />
+        <h1 className="visually-hidden">About Us</h1>
+        {/* <AboutBanThree /> */}
+      </main>
       <Footer />
     </>
   );
