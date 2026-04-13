@@ -13,10 +13,10 @@ const About = () => {
     <>
       <Navbar />
       <main id="main-content">
+        <h1 className="visually-hidden">About Us</h1>
         <OrgPhilo />
         <AboutBanOne />
         <AboutBanTwo />
-        <h1 className="visually-hidden">About Us</h1>
         {/* <AboutBanThree /> */}
       </main>
       <Footer />
