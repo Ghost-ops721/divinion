@@ -99,32 +99,34 @@ const AboutBanThree = () => {
 
   const renderRows = (rows) => {
     return rows.map((row, rowIndex) => (
-      <div
+      <ul
         className="flex lg:flex-row md:flex-row flex-col items-center lg:gap-0 md:gap-0 gap-10 p-2 lg:p-16 justify-between"
         key={rowIndex}
       >
         {row.map((person, personIndex) => (
-          <div
+          <li
             className="flex flex-col p-2"
             key={personIndex}
             onClick={() => person && handleImageClick(person)}
           >
             {person ? (
               <>
+              <button>
                 <img
                   src={person.image}
                   className="rounded-xl shadow-xl w-full h-auto max-w-[330px] max-h-[315px] cursor-pointer object-cover"
-                  alt={person.name}
+                  alt=""
                 />
                 <p className="mt-4 font-semibold">{person.name}</p>
                 <p className="text-gray-500 text-sm">{person.position}</p>
+              </button>
               </>
             ) : (
               <div className="w-[300px] h-[350px]"></div> // Placeholder for the blank spot
             )}
-          </div>
+          </li>
         ))}
-      </div>
+      </ul>
     ));
   };
 

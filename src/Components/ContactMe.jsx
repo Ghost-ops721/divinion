@@ -6,7 +6,7 @@ import { IoCallSharp } from "react-icons/io5";
 const ContactMe = () => {
   return (
     <>
-      <div className="flex font-joe flex-col text-white ">
+      <div className="w-full md:w-1/2 text-white flex flex-col items-center md:items-start text-center md:text-left gap-6">
         {/* <p className="text-4xl font-semibold">Contact Me</p> */}
         <div className="flex flex-col items-start justify-center">
           <div className="flex flex-col  gap-8 items-center justify-center mx-auto">
