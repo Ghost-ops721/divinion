@@ -23,8 +23,11 @@ const OrgPhilo = () => {
             </p>
           </div>
           <div className="lg:h-[400px] lg:w-1 bg-[#5f7530] rounded "></div>
-          <div className="">
-            <img src="philo.svg" className="" alt="Illustration showing Divinion as a trusted partner for capital preservation, highlighting team experience of over 100 years and a collaborative investment approach" />
+          <div className="star-section">
+            <span>Divinion as a trusted partner <strong>for capital preservation</strong></span>
+            <span>Our mission statement centers around being <strong>'responsible and rewarding'</strong></span>
+            <span><em><strong>Our team combined has 100+ years</strong> pioneering experience</em></span>
+            <img src="Star-image.png" className="" alt="Illustration showing Divinion as a trusted partner for capital preservation, highlighting team experience of over 100 years and a collaborative investment approach" />
           </div>
         </div>
       </div>

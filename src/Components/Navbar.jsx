@@ -87,8 +87,8 @@ function Navbar() {
                 <Link
                   to="/"
                   className={`block py-2 px-3 rounded md:p-0 ${isActive("/")
-                      ? "text-dark-green"
-                      : "text-gray-900 hover:text-dark-green"
+                    ? "text-dark-green"
+                    : "text-gray-900 hover:text-dark-green"
                     }`}
                 >
                   Home
@@ -134,8 +134,8 @@ function Navbar() {
                 <Link
                   to="/contact"
                   className={`block py-2 px-3 rounded md:p-0 ${isActive("/contact")
-                      ? "text-dark-green"
-                      : "text-gray-900 hover:text-dark-green"
+                    ? "text-dark-green"
+                    : "text-gray-900 hover:text-dark-green"
                     }`}
                 >
                   Contact
@@ -147,8 +147,8 @@ function Navbar() {
                   <Link
                     to="/admin"
                     className={`block py-2 px-3 rounded md:p-0 ${isActive("/admin")
-                        ? "text-dark-green"
-                        : "text-gray-900 hover:text-dark-green"
+                      ? "text-dark-green"
+                      : "text-gray-900 hover:text-dark-green"
                       }`}
                   >
                     Dashboard
@@ -165,11 +165,17 @@ function Navbar() {
                   }}
                   aria-expanded={servicesDropdown}
                   className={`block py-2 px-3 rounded md:p-0 ${isActive("/services")
-                      ? "text-dark-green"
-                      : "text-gray-900 hover:text-dark-green"
+                    ? "text-dark-green"
+                    : "text-gray-900 hover:text-dark-green"
                     }`}
                 >
                   Services
+                  <span
+                    className={`inline-block transition-transform duration-200 ${servicesDropdown ? "rotate-180" : "rotate-0"
+                      }`}
+                  >
+                    ▼
+                  </span>
                 </button>
                 {servicesDropdown && (
                   <ul className="absolute top-full left-0 mt-1 w-36 bg-white shadow-lg rounded-md z-10">
