@@ -86,7 +86,7 @@ const HomBanOne = () => {
 
   return (
     <>
-      <header className="m-0 lg:hover:m-16 hover:m-4 transition: duration-700">
+      <div className="m-0 lg:hover:m-16 hover:m-4 transition: duration-700">
         <div
           className="relative bg-cover z-20 flex flex-col pb-4 sm:pb-10   md:p-8 bg-center w-full h-[88vh] my-auto mt-1"
           style={{ backgroundImage: "url('/hbgg.svg')" }}
@@ -148,7 +148,7 @@ const HomBanOne = () => {
             closeButtonRef={closeButtonRef}
           />
         </div>
-      </header>
+      </div>
     </>
   );
 };

@@ -13,11 +13,13 @@ const HomePage = () => {
   useDocumentTitle("Home - Divinion Investment");
   return (
     <>
+    <header>
       <Navbar />
-      <HomBanOne />
+    </header>
       {/* <HomBanTwo />
       <HomeBanThree /> */}
       <main id="main-content">
+        <HomBanOne />
         <h1 className="visually-hidden">Divinion investment</h1>
       </main>
       <Footer />

@@ -19,7 +19,7 @@ const DistributorCorner = () => {
             {/* Added padding and centered text */}
             <a
               href="https://drive.google.com/drive/folders/1QhZdeWDJD6OQOoFj0rZyuNk71hpCFR-3?usp=sharing"
-              className="text-blue-500 hover:underline "
+              className="text-blue-600 underline "
               target="_blank"
               rel="noopener noreferrer"
             >

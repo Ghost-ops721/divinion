@@ -27,7 +27,7 @@ const OrgPhilo = () => {
             <span>Divinion as a trusted partner <strong>for capital preservation</strong></span>
             <span>Our mission statement centers around being <strong>'responsible and rewarding'</strong></span>
             <span><em><strong>Our team combined has 100+ years</strong> pioneering experience</em></span>
-            <img src="Star-image.png" className="" alt="Illustration showing Divinion as a trusted partner for capital preservation, highlighting team experience of over 100 years and a collaborative investment approach" />
+            <img src="Star-image.png" className="" alt="" />
           </div>
         </div>
       </div>

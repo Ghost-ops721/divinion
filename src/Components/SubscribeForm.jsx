@@ -235,7 +235,7 @@ const SubscribeForm = () => {
                                         ref={successRef}
                                         tabIndex="-1"
                                         role="alert"
-                                        className="mt-2 text-green-600 text-sm"
+                                        className="mt-2 text-green-700 text-sm"
                                     >
                                         {success}
                                     </p>

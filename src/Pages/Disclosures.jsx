@@ -19,7 +19,7 @@ const Disclosures = () => {
             {/* Added padding and centered text */}
             <a
               href="https://drive.google.com/drive/folders/1JCigign8YK2REf0nsYSzBlJtMIQ1oOLS"
-              className="text-blue-500 hover:underline "
+              className="text-blue-600 underline "
               target="_blank"
               rel="noopener noreferrer"
             >
