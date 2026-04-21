@@ -9,6 +9,8 @@ const SubscribeForm = () => {
     const [comment, setComment] = useState('');
     const [error, setError] = useState(null);
     const [success, setSuccess] = useState(null);
+    const [message, setMessage] = useState('');
+    const [messageType, setMessageType] = useState('');
 
     const [errors, setErrors] = useState({});
     const emailRef = useRef(null);
@@ -58,14 +60,16 @@ const SubscribeForm = () => {
             setName('');
             setPhone(''); // Reset phone number field
             setComment('');
-            setSuccess('Message successfully sent!');
+            setMessage('Message successfully sent!');
+            setMessageType('success');
             setTimeout(() => {
                 successRef.current?.focus();
             }, 0);
             setErrors({});
             setError(null);
         } catch (error) {
-            setError('Error sending message: ' + error.message);
+            setMessage('Error sending message: ' + error.message);
+            setMessageType('error');
         }
     };
 
@@ -79,6 +83,9 @@ const SubscribeForm = () => {
                         <ContactMe />
                         <div className="w-full md:w-1/2 bg-white p-6 md:p-8 rounded-lg shadow-md max-w-md mx-auto">
                             <h2 className="text-2xl font-bold mb-4 text-center text-gray-800">For any Queries<br /> Please Reach out to us</h2>
+                            <p className="text-sm text-gray-600 font-medium mb-4 text-center">
+                                Fields marked with asterisk (*) are mandatory.
+                            </p>
                             <form onSubmit={handleSubmit} className="flex flex-col">
                                 <label htmlFor="email" className="block text-sm font-medium text-gray-700 mt-4">
                                     Email <strong>*</strong>
@@ -109,6 +116,8 @@ const SubscribeForm = () => {
                                         className="w-4 h-4 flex-shrink-0"
                                         viewBox="0 0 24 24"
                                         fill="currentColor"
+                                        role="img"
+                                        aria-label="Error"
                                         >
                                         <path d="M17.5 2.5L23 12L17.5 21.5H6.5L1 12L6.5 2.5H17.5ZM16.3469 4.5H7.65311L3.311 12L7.65311 19.5H16.3469L20.689 12L16.3469 4.5ZM11 15H13V17H11V15ZM11 7H13V13H11V7Z" />
                                         </svg>
@@ -145,6 +154,8 @@ const SubscribeForm = () => {
                                         className="w-4 h-4 flex-shrink-0"
                                         viewBox="0 0 24 24"
                                         fill="currentColor"
+                                        role="img"
+                                        aria-label="Error"
                                         >
                                         <path d="M17.5 2.5L23 12L17.5 21.5H6.5L1 12L6.5 2.5H17.5ZM16.3469 4.5H7.65311L3.311 12L7.65311 19.5H16.3469L20.689 12L16.3469 4.5ZM11 15H13V17H11V15ZM11 7H13V13H11V7Z" />
                                         </svg>
@@ -181,6 +192,8 @@ const SubscribeForm = () => {
                                         className="w-4 h-4 flex-shrink-0"
                                         viewBox="0 0 24 24"
                                         fill="currentColor"
+                                        role="img"
+                                        aria-label="Error"
                                         >
                                         <path d="M17.5 2.5L23 12L17.5 21.5H6.5L1 12L6.5 2.5H17.5ZM16.3469 4.5H7.65311L3.311 12L7.65311 19.5H16.3469L20.689 12L16.3469 4.5ZM11 15H13V17H11V15ZM11 7H13V13H11V7Z" />
                                         </svg>
@@ -216,6 +229,8 @@ const SubscribeForm = () => {
                                         className="w-4 h-4 flex-shrink-0"
                                         viewBox="0 0 24 24"
                                         fill="currentColor"
+                                        role="img"
+                                        aria-label="Error"
                                         >
                                         <path d="M17.5 2.5L23 12L17.5 21.5H6.5L1 12L6.5 2.5H17.5ZM16.3469 4.5H7.65311L3.311 12L7.65311 19.5H16.3469L20.689 12L16.3469 4.5ZM11 15H13V17H11V15ZM11 7H13V13H11V7Z" />
                                         </svg>
@@ -229,17 +244,20 @@ const SubscribeForm = () => {
                                 >
                                     Submit
                                 </button>
-                                {error && <p className="mt-2 text-red-600 text-sm" role="alert">{error}</p>}
-                                {success && (
-                                    <p
-                                        ref={successRef}
-                                        tabIndex="-1"
-                                        role="alert"
-                                        className="mt-2 text-green-700 text-sm"
-                                    >
-                                        {success}
-                                    </p>
-                                )}
+                                <p
+                                    ref={successRef}
+                                    tabIndex="-1"
+                                    role="alert"
+                                    className={`mt-2 text-sm ${
+                                        messageType === 'error'
+                                            ? 'text-red-600'
+                                            : messageType === 'success'
+                                            ? 'text-green-700'
+                                            : ''
+                                    }`}
+                                >
+                                    {message}
+                                </p>
                             </form>
                         </div>
 
