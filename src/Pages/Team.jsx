@@ -7,6 +7,7 @@ import useDocumentTitle from "../Components/heperFunctions/SetPageTitle";
 
 
 const Team = () => {
+  // adding title
   useDocumentTitle("Team - Divinion investment");
   return (
     <>
