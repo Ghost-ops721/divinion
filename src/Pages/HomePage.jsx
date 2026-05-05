@@ -19,8 +19,8 @@ const HomePage = () => {
       {/* <HomBanTwo />
       <HomeBanThree /> */}
       <main id="main-content">
-        <HomBanOne />
         <h1 className="visually-hidden">Divinion investment</h1>
+        <HomBanOne />
       </main>
       <Footer />
 

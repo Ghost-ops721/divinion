@@ -1,6 +1,7 @@
 import React, { useState, useContext, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { UserContext } from "../Context/UserContext"; // Adjust the path as necessary
+import { useRef } from "react";
 
 function Navbar() {
   const [show, setShow] = useState(false);
@@ -9,6 +10,8 @@ function Navbar() {
   const [servicesDropdown, setServicesDropdown] = useState(false); // State for services dropdown
   const [visible, setVisible] = useState(true); // State for navbar visibility
   const [prevScrollPos, setPrevScrollPos] = useState(window.pageYOffset); // Track the scroll position
+
+  const buttonRef = useRef(null);
 
   // Toggle navbar visibility based on scroll
   useEffect(() => {
@@ -155,14 +158,23 @@ function Navbar() {
                   </Link>
                 </li>
               )}
-              <li className="relative">
+              <li className="relative"
+                onKeyDown={(e) => {
+                  if (e.key === "Escape") {
+                    setServicesDropdown(false);
+                    buttonRef.current?.focus();
+                  }
+                }}
+                onBlur={(e) => {
+                  const nextFocus = e.relatedTarget;
+                  if (!e.currentTarget.contains(nextFocus)) {
+                    setServicesDropdown(false);
+                  }
+                }}
+              >
                 <button
+                  ref={buttonRef}
                   onClick={toggleServicesDropdown}
-                  onKeyDown={(e) => {
-                    if (e.key === "Escape") {
-                      setServicesDropdown(false);
-                    }
-                  }}
                   aria-expanded={servicesDropdown}
                   className={`block py-2 px-3 rounded md:p-0 ${isActive("/services")
                     ? "text-dark-green"
@@ -171,6 +183,7 @@ function Navbar() {
                 >
                   Services
                   <span
+                    aria-hidden="true"
                     className={`inline-block transition-transform duration-200 ${servicesDropdown ? "rotate-180" : "rotate-0"
                       }`}
                   >
@@ -220,7 +233,7 @@ function Navbar() {
       </nav>
 
       {show && (
-        <div className="flex flex-col items-center pl-10 pr-10 h-[92vh] w-full bg-white gap-24">
+        <div className="flex flex-col items-center pl-10 pr-10 w-full bg-white gap-24 relative z-[999]">
           {/* Mobile menu */}
           <div className="flex flex-row items-center gap-20">
             <button className="py-3 px-4" aria-label="Close Navigation Menu" onClick={onNavClick}>
@@ -247,23 +260,52 @@ function Navbar() {
               />
             </svg>
           </div>
-          <div className="flex flex-col items-center gap-4 font-joe text-2xl font-semibold">
-            <button className="bg-transparent outline-none hover:border-2 pl-20 pr-20 pt-2 pb-2 hover:border-black">
-              <Link to="/">Home</Link>
-            </button>
-            <button className="bg-transparent outline-none hover:border-2 pl-20 pr-20 pt-2 pb-2 hover:border-black">
-              <Link to="/about">About Us</Link>
-            </button>
-            <button className="bg-transparent outline-none hover:border-2 pl-20 pr-20 pt-2 pb-2 hover:border-black">
-              <Link to="/blog">News</Link>
-            </button>
-            <button className="bg-transparent outline-none hover:border-2 pl-20 pr-20 pt-2 pb-2 hover:border-black">
-              <Link to="/contact">Contact</Link>
-            </button>
-            <button className="bg-transparent outline-none hover:border-2 pl-20 pr-20 pt-2 pb-2 hover:border-black">
-              <Link to="/services-privacy-policy">Services</Link>
-            </button>
-          </div>
+          <ul className="flex flex-col items-center gap-4 font-joe text-2xl font-semibold list-none">
+            <li>
+              <Link
+                to="/"
+                className="bg-transparent pl-20 pr-20 pt-2 pb-2 hover:border-2 hover:border-black focus:outline-none focus:ring-2 focus:ring-black"
+              >
+                Home
+              </Link>
+            </li>
+
+            <li>
+              <Link
+                to="/about"
+                className="bg-transparent pl-20 pr-20 pt-2 pb-2 hover:border-2 hover:border-black focus:outline-none focus:ring-2 focus:ring-black"
+              >
+                About Us
+              </Link>
+            </li>
+
+            <li>
+              <Link
+                to="/blog"
+                className="bg-transparent pl-20 pr-20 pt-2 pb-2 hover:border-2 hover:border-black focus:outline-none focus:ring-2 focus:ring-black"
+              >
+                News
+              </Link>
+            </li>
+
+            <li>
+              <Link
+                to="/contact"
+                className="bg-transparent pl-20 pr-20 pt-2 pb-2 hover:border-2 hover:border-black focus:outline-none focus:ring-2 focus:ring-black"
+              >
+                Contact
+              </Link>
+            </li>
+
+            <li>
+              <Link
+                to="/services-privacy-policy"
+                className="bg-transparent pl-20 pr-20 pt-2 pb-2 hover:border-2 hover:border-black focus:outline-none focus:ring-2 focus:ring-black"
+              >
+                Services
+              </Link>
+            </li>
+          </ul>
           <div className="flex flex-col items-center text-gray-500">
             <Link to="/privacy-policy" className="mb-4">
               Terms and Conditions

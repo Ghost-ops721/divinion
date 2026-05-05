@@ -154,11 +154,34 @@ const AboutBanOne = () => {
             Growth Drivers & Anchors
           </h2>
           <div className="mx-auto flex  flex-col p-4 lg:p-20">
-            <img
-              src="icy.svg"
-              className="hover:cursor-pointer p-5 hover:p-0 transition: duration-500"
-              alt=""
-            />
+            <h3>
+              <img
+                src="icy.svg"
+                className="hover:cursor-pointer p-5 hover:p-0 transition: duration-500"
+                alt="Consistent returns"
+              />
+            </h3>
+            <ul className="list-none space-y-4 visually-hidden">
+              <li>
+                <h4>Consistent Returns:</h4> Strong fundamentals combined with short term range boundness
+              </li>
+
+              <li>
+                <h4>Low Volatility:</h4> Fund targets volatility lower than industry benchmarks
+              </li>
+
+              <li>
+                <h4>Returns even in Flat and Bearish Markets:</h4> By employing unique hedging strategies
+              </li>
+
+              <li>
+                <h4>Reduced buying price:</h4> Using derivatives we are able to buy sound stocks at reduced prices
+              </li>
+
+              <li>
+                <h4>Downside Protection:</h4> Through diversification across asset classes and derivatives strategy
+              </li>
+            </ul>
           </div>
         </div>
       </div>
