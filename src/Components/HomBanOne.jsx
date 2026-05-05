@@ -98,7 +98,7 @@ const HomBanOne = () => {
             <div className="flex flex-col items-start text-left">
               {/* <p>(Click each to read)</p> */}
 
-              <ul className="list-disc pl-5">
+              <ul className="list-disc pl-5 bg-black/70 p-2">
                 <li>
                   <button
                     className="cursor-pointer text-left [text-shadow:2px_2px_4px_rgba(0,0,0,0.5)]"

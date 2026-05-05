@@ -6,9 +6,12 @@ import OurPartners from "../Components/OurPartners"
 
 
 const Team = () => {
+  useDocumentTitle("Team - Divinion investment");
   return (
     <>
+    <header>
       <Navbar />
+    </header>
       <main id="main-content">
         <h1 className="visually-hidden">Team</h1>
         <AboutBanThree />

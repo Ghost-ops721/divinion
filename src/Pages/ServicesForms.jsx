@@ -10,7 +10,9 @@ const ServicesForms = () => {
     <div className="flex flex-col min-h-screen">
       {" "}
       {/* Ensures the footer stays at the bottom */}
+      <header>
       <Navbar />
+      </header>
       <main id="main-content">
         <h1 className="visually-hidden">Services Form - Divinion investment</h1>
         <div className="flex-grow flex flex-col items-center justify-center py-10 font-joe">

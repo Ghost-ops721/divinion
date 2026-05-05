@@ -11,7 +11,9 @@ const About = () => {
   useDocumentTitle("About Us - Divinion investment");
   return (
     <>
+    <header>
       <Navbar />
+    </header>
       <main id="main-content">
         <h1 className="visually-hidden">About Us</h1>
         <OrgPhilo />

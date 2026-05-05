@@ -7,7 +7,9 @@ const Subscribe = () => {
   useDocumentTitle("Contact Us - Divinion Investment");
   return (
     <>
+    <header>
       <Navbar />
+    </header>
       <main id="main-content">
         <h1 className="visually-hidden">Contact Us</h1>
         <SubscribeForm />
