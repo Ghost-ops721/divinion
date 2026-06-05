@@ -270,7 +270,7 @@ function Navbar() {
               </Link>
             </li>
 
-            <li>
+            {/* <li>
               <Link
                 to="/about"
                 className="bg-transparent pl-20 pr-20 pt-2 pb-2 hover:border-2 hover:border-black focus:outline-none focus:ring-2 focus:ring-black"
@@ -286,7 +286,7 @@ function Navbar() {
               >
                 News
               </Link>
-            </li>
+            </li> */}
 
             <li>
               <Link

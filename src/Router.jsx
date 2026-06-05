@@ -16,6 +16,7 @@ import ServicesPrivacyPolicy from "./Pages/ServicesPrivacyPolicy";
 import Team from "./Pages/Team";
 import DistributorCorner from "./Pages/DistributorCorner";
 import Disclosures from "./Pages/Disclosures";
+import AdminOnlyRoute from "./Components/AdminOnlyRoute";
 const AppRouter = () => {
   const { currentUser } = useContext(UserContext); // Access current user from context
 
@@ -23,12 +24,57 @@ const AppRouter = () => {
     <UserProvider>
       <Routes>
         <Route path="/" element={<HomePage />} />
-        <Route path="/about/" element={<About />} />
-        <Route path="/team/" element={<Team />} />
+        <Route
+          path="/about"
+          element={
+            <AdminOnlyRoute>
+              <About />
+            </AdminOnlyRoute>
+          }
+        />
+        <Route
+          path="/about/"
+          element={
+            <AdminOnlyRoute>
+              <About />
+            </AdminOnlyRoute>
+          }
+        />
+        <Route
+          path="/team"
+          element={
+            <AdminOnlyRoute>
+              <Team />
+            </AdminOnlyRoute>
+          }
+        />
+        <Route
+          path="/team/"
+          element={
+            <AdminOnlyRoute>
+              <Team />
+            </AdminOnlyRoute>
+          }
+        />
 
         <Route path="/admin/" element={<Admin />} />
         <Route path="/login/" element={<Login />} />
-        <Route path="/blog/" element={<News />} />
+        <Route
+          path="/blog"
+          element={
+            <AdminOnlyRoute>
+              <News />
+            </AdminOnlyRoute>
+          }
+        />
+        <Route
+          path="/blog/"
+          element={
+            <AdminOnlyRoute>
+              <News />
+            </AdminOnlyRoute>
+          }
+        />
         <Route path="/contact" element={<Subscribe />} />
         <Route path="/services-form" element={<ServicesForms />} />
         <Route path="/distributor-corner" element={<DistributorCorner />} />
