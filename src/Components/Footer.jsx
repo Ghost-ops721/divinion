@@ -26,7 +26,7 @@ function Footer() {
                 <ul className="text-gray-500 flex flex-col gap-3  font-medium">
                   <li className="">
                     <a href="/adminlogin" className="hover:underline">
-                      Login
+                      AdminLogin
                     </a>
                   </li>
                   <li className="">
